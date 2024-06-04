@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "DJANGO-TODO-APP/wsgi.py",
+        "use": "@versal/python",
+        "config": {"maxLambdaSize": "15mb", "runtime": "python3.12"}
+    }],
+    "routes": [
+        {
+            "src": "/(.*",
+            "dest": "DJANGO-TODO-APP/wsgi.py"
+        }
+    ]
+}
